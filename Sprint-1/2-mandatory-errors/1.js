@@ -1,5 +1,6 @@
 // trying to create an age variable and then reassign the value by 1
 
+<<<<<<< HEAD
 
 
 const age = 33;
@@ -24,3 +25,7 @@ To reassign a value, we must assign a new value to the same variable name:
 let age = 33;
 age = age + 1; // this is reassignment
 */
+=======
+const age = 33;
+age = age + 1;
+>>>>>>> main
