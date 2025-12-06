@@ -25,7 +25,6 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
-<<<<<<< HEAD
 
 // 2. const penceStringWithoutTrailingP:
 // Creates a new variable and uses the substring() method to return the part of the string from index 0 up to, but not including, the last character. This effectively removes the trailing ‘p’ from the original string
@@ -41,5 +40,3 @@ console.log(`£${pounds}.${pence}`);
 
 // 6. console.log:
 // This line logs the final formatted price to the console. It combines the pounds and pence variables into a single string using a template literal, adding the pound symbol at the start and a dot between the pounds and pence
-=======
->>>>>>> main

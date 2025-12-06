@@ -2,7 +2,6 @@
 // what's the error ?
 
 console.log(`I was born in ${cityOfBirth}`);
-<<<<<<< HEAD
 //Error: Cannot access 'cityOfBirth' before initialization
 const cityOfBirth = "Bolton";
 
@@ -12,6 +11,3 @@ const cityOfBirth = "Bolton";
 //const cityOfBirth = "Bolton";
 //console.log(`I was born in ${cityOfBirth}`); 
 
-=======
-const cityOfBirth = "Bolton";
->>>>>>> main

@@ -12,16 +12,11 @@
 const filePath = "/Users/mitch/cyf/Module-JS1/week-1/interpret/file.txt";
 const lastSlashIndex = filePath.lastIndexOf("/");
 const base = filePath.slice(lastSlashIndex + 1);
-<<<<<<< HEAD
 console.log(`The base part of ${filePath} is ${base}`)
-=======
-console.log(`The base part of ${filePath} is ${base}`);
->>>>>>> main
 
 // Create a variable to store the dir part of the filePath variable
 // Create a variable to store the ext part of the variable
 
-<<<<<<< HEAD
 const firstPath = "/home/user/dir/file.txt";
 const firstPartIndex = firstPath.lastIndexOf("/");
 const dir = firstPath.slice(0, firstPartIndex);
@@ -33,9 +28,5 @@ const dotIndex = randomPath.lastIndexOf(".");
 const ext = randomPath.slice(dotIndex);
 console.log(`The ext part of ${randomPath} is ${ext}`)
 
-=======
-const dir = ;
-const ext = ;
->>>>>>> main
 
 // https://www.google.com/search?q=slice+mdn
