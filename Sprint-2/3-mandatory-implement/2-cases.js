@@ -14,3 +14,13 @@
 // You will need to come up with an appropriate name for the function
 // Use the MDN string documentation to help you find a solution
 // This might help https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+
+
+function sentence(string) {
+    const parts = string.split(' ')
+    const underscores= parts.join('_')
+    const upperName = underscores.toUpperCase()
+    return upperName
+    //string.toUpperCase()
+}
+console.log(sentence("lord of the rings"))
