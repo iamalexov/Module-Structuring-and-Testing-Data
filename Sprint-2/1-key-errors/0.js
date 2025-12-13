@@ -17,7 +17,7 @@
 // JS does not allow redeclaring the same variable  name in the same scope. To fix this,
 // we can either use a different variable name or assign directly to str instead of redeclaring it
 
-// =============> 
+// =============> write your new code here:
   function capitalise(str) {
    str = `${str[0].toUpperCase()}${str.slice(1)}`;
 return str;
