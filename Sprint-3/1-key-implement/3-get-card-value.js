@@ -8,14 +8,12 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  
-    if (card[0] === "A") return 11;
+     if (card[0] === "A") return 11;
     else if (card[0] > "2" && card[0] < "9")
       return parseInt(card[0], 10);
     else if (card[0] === "J" || card[0]=== "Q" || card[0] === "K" || card.slice(0, 2)=== "10")
       return 10;
-    else if (card[0] === "A") return 11;
-      else {
+    else {
         return "Invalid card rank."
       }
 }
