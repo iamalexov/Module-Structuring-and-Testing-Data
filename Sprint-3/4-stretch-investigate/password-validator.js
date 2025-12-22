@@ -16,7 +16,7 @@ function passwordValidator(password) {
     for(let i = 0; i < password.length; i++) {
             const char = password[i];
              if (char >= "a" && char <= "z") {
-                lowercase = true;
+                lowercase = true; 
         }
     }
     if (!lowercase) return false;
@@ -40,7 +40,7 @@ function passwordValidator(password) {
     }
     if (!hasSpecialChar) return false;
 
-    const previousPasswords = ["Abcd3!", "XyZ9$", "Qwer1&"];
+    const previousPasswords = ["Abcd34!", "XyZ9$", "Qwer1&"];
 
 if (previousPasswords.includes(password)) {
   return false;
