@@ -1,0 +1,13 @@
+{
+  "name": "1-key-implement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1-get-angle-type.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

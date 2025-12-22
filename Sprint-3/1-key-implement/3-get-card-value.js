@@ -8,7 +8,14 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-    if (rank === "A") return 11;
+     if (card[0] === "A") return 11;
+    else if (card[0] > "2" && card[0] < "9")
+      return parseInt(card[0], 10);
+    else if (card[0] === "J" || card[0]=== "Q" || card[0] === "K" || card.slice(0, 2)=== "10")
+      return 10;
+    else {
+        return "Invalid card rank."
+      }
 }
 
 // You need to write assertions for your function to check it works in different cases
@@ -34,18 +41,62 @@ assertEquals(aceofSpades, 11);
 // Then it should return the numeric value corresponding to the rank (e.g., "5" should return 5).
 const fiveofHearts = getCardValue("5♥");
 // ====> write your test here, and then add a line to pass the test in the function above
+assertEquals(fiveofHearts, 5);
+
 
 // Handle Face Cards (J, Q, K):
 // Given a card with a rank of "10," "J," "Q," or "K",
 // When the function is called with such a card,
 // Then it should return the value 10, as these cards are worth 10 points each in blackjack.
+const valueTen = getCardValue("J♥")
+assertEquals(valueTen, 10)
 
 // Handle Ace (A):
 // Given a card with a rank of "A",
 // When the function is called with an Ace,
 // Then it should, by default, assume the Ace is worth 11 points, which is a common rule in blackjack.
+const valueAce = getCardValue("A♠");
+assertEquals(valueAce, 11);
 
 // Handle Invalid Cards:
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+const invalidCard = getCardValue("X♦");
+assertEquals(invalidCard,"Invalid card rank.")
+
+
+
+
+/* // Refactoring :
+ function getCardValue(card) {
+//  Extract the card rank (everything except the suit)
+const rank = card.slice(0, -1); // remove the last character(emoji) and keep only the rank
+
+//  Handle Ace (Checks if the card rank is exactly "A" (Ace)):
+if (rank === "A") { //In blackjack, an Ace is worth 11 points by default
+    return 11;
+  }
+
+// Handle face cards and 10(Checks if the card is a King, Queen, Jack, or 10)
+if (rank === "K" || rank === "Q" || rank === "J" || rank === "10") {
+    return 10;
+  }
+
+// Handle number cards (2–9)
+  const number = parseInt(rank, 10); // Converts the string rank into a number using base 10
+if (number >= 2 && number <= 9) {
+    return number;
+  }
+
+// Handle invalid cards
+  return "Invalid card rank";
+}
+
+// assertEquals -This is a function name. It is a helper function used to compare two values
+// getCardValue - The function that calculates the numeric value of a playing card
+assertEquals(getCardValue("A♠"), 11);
+assertEquals(getCardValue("5♥"), 5);
+assertEquals(getCardValue("J♦"), 10);
+assertEquals(getCardValue("10♣"), 10);
+assertEquals(getCardValue("X♠"), "Invalid card rank."); */
